@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Dropper : MonoBehaviour
 {
+    [SerializeField] float timeToWait = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Time elapsed: " + Time.time);   
+        if (Time.time > timeToWait)
+        {
+            Debug.Log("The object has dropped");
+        }
     }
 }
